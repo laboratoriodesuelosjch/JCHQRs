@@ -1,63 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Laboratoio de Suelos JCH</title>
-  
-  <style>
-    body {
-      background-color: lightblue;
-      text-align: center;
-    }
-
-    .lds-ring {
-      /* change color here */
-      color: #1c4c5b
-    }
-        
-    .lds-ring,
-    .lds-ring div {
-      box-sizing: border-box;
-    }
-    .lds-ring {
-      display: inline-block;
-      position: relative;
-      width: 80px;
-      height: 80px;
-    }
-    .lds-ring div {
-      box-sizing: border-box;
-      display: block;
-      position: absolute;
-      width: 64px;
-      height: 64px;
-      margin: 8px;
-      border: 8px solid currentColor;
-      border-radius: 50%;
-      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      border-color: currentColor transparent transparent transparent;
-    }
-    .lds-ring div:nth-child(1) {
-      animation-delay: -0.45s;
-    }
-    .lds-ring div:nth-child(2) {
-      animation-delay: -0.3s;
-    }
-    .lds-ring div:nth-child(3) {
-      animation-delay: -0.15s;
-    }
-    @keyframes lds-ring {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Laboratorio de Suelos JCH</title>
 </head>
 <body>
+  <main class="hero">
+    <div class="overlay"></div>
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    <section class="content">
+      <h1>Laboratorio de Suelos JCH</h1>
+    </section>
+  </main>
+
   <script>
     const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbze1GDdQkV7zjDQbkKlw2AlJClXg84ulsBG15gejB6aDb5m3bgsfN6TWlH9TB86zlM7/exec";
     
@@ -68,18 +25,12 @@
       fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
       .then((r) => {
-        console.log(r);
-        //document.write(r);
         if(r){
           document.location.replace(r);
         }
       })
       .catch(err => console.log(err))
     }
-
   </script>
-  
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-  
 </body>
 </html>
