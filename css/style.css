@@ -11,7 +11,7 @@ html {
 }
 
 .hero {
-  background: url('/img/back-1.jpg') no-repeat center center / cover;
+  background: url('img/back-1.jpg') no-repeat center center / cover;
   height: 100vh;
   display: flex;
   justify-content: center;
